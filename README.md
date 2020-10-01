@@ -687,3 +687,22 @@ print sum(i**2 for i in xrange(10))
 ```
 
 First way tells you what to do, second way tells you what you want.
+
+
+## Map string to value
+```python
+s = ['a','b','c','a']
+x = {'a':1,'b':2,'c':3}
+
+for t in range(len(s)):
+    s[t] = x[s[t]]
+```
+
+### Better
+```python
+s = ['a','b','c','a']
+x = {'a':1,'b':2,'c':3}
+
+for t in s:
+    t = x[t]
+```
